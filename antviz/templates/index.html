@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/cosmo/bootstrap.min.css">
+	<title>AntViz Overview</title>
+	{{ bokeh_css }}
+    {{ bokeh_js }}
+	<style>
+      {% include 'styles.css' %}
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">AntViz</a>
+		 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    	<div class="navbar-nav">
+		     		<a class="nav-item nav-link" href="https://www.antweb.org/" target="_blank">AntWeb</a>
+		     		<a class="nav-item nav-link" href="http://antcat.org/" target="_blank">AntCat</a>
+		     		<a class="nav-item nav-link" data-toggle="modal" data-target=".bd-example-modal-lg">About</a>
+		    		<a class="nav-item nav-link" href="https://github.com/rafaelmen/antviz" target="_blank">Project Code</a>
+		    	</div>
+		  	</div>
+		</nav>
+		<div class="jumbotron" class="bg-dark">
+			<div class="row" id="loading">
+				<div class="col-12 text-center">
+					<h3>Loading Antviz Data<span class="blinking">.</span><span class="blinking2">.</span><span class="blinking3">.</span></h3>
+					<div class="progress">
+  						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						{{ plot_div|indent(8) }}
+        				{{ plot_script|indent(8) }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+		  <div class="card-body">
+			<h4 class="card-title">Visualization Resources</h4>
+			  <p class="card-text">All specimens and geolocale data can be accessed using the <a href="https://www.antweb.org/apiV3.do" target="_blank">AntWeb API v3</a>.
+				  <br><br>
+				  The following research studies influenced the visualizations:
+				  <br>
+				  <a href="http://antcat.org/documents/265/14223.pdf" class="card-link" target="_blank">Bolton, B. 1995a. A taxonomic and zoogeographical census of the extant ant taxa (Hymenoptera: Formicidae). Journal of Natural History 29:1037-1056. [1995-08]</a>
+				  <br>
+				  <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192011" class="card-link" target="_blank">Marques ACR, M. Raimundo M, B. Cavalheiro EM, F. P. Salles L, Lyra C, J. Von Zuben F (2018). Ant genera identification using an ensemble of convolutional neural networks. PLoS ONE 13(1):e0192011.</a>
+		  </div>
+		</div>
+	</div>
+
+	<!-- Large modal -->
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLongTitle">AntViz Data Visualization</h5>
+	      </div>
+	      <div class="modal-body">
+	       <p>
+			   AntViz is a web application dedicated to the exploration of ant data stored in the AntWeb.org database. The visualizations on AntViz help describe the vast diversity of ant data available in the database.
+			   <br><br>
+			   The application is built using Python and the Bokeh visualization library. View all project code on <a href="https://github.com/rafaelmen/antviz" target='_blank'>GitHub</a>.
+			   <br><br>
+			   Questions can be sent to:
+			   <br>
+			   rmendez@g.harvard.edu
+		   </p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- bootstrap resources -->  
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+		{% include 'load.js' %}
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+attrs:
+    Title:
+        text_color: '#777777'
+        text_font_size: '18px'
+        text_font_style: 'normal'
+        text_font: 'Segoe UI'
+    Figure:
+        border_fill_color: '#E9ECEF'
+        background_fill_color: '#E9ECEF'
+        outline_line_color: '#777777'
+        toolbar_location: above
+    Axis:
+        axis_line_color: '#BFBFBF'
+        axis_label_text_color: '#777777'
+        major_label_text_color: '#777777'
+        major_tick_line_color: '#BFBFBF'
+        minor_tick_line_color: '#BFBFBF'
+        minor_tick_line_color: '#BFBFBF'
+    Legend:
+        label_text_color: '#777777'
+        border_line_color: '#BFBFBF'
+        background_fill_alpha: 0.2

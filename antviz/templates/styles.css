@@ -1,0 +1,42 @@
+/* Animation for blinking text adapted from https://html-online.com/articles/blinking-text-css-animation/ */
+.blinking{
+	animation:blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: #000;	}
+	50%{	color: transparent;	}
+	100%{	color: #000;	}
+}
+
+.blinking2{
+	animation:blinkingText2 1s infinite;
+  animation-delay: .3s;
+}
+@keyframes blinkingText2{
+	0%{		color: #000;	}
+	50%{	color: transparent;	}
+	100%{	color: #000;	}
+}
+
+.blinking3{
+	animation:blinkingText3 1s infinite;
+  animation-delay: .6s;
+}
+@keyframes blinkingText3{
+	0%{		color: #000;	}
+	50%{	color: transparent;	}
+	100%{	color: #000;	}
+}
+
+/* Custom styles for Bokeh */
+.bk-root .bk-bs-nav>li>span:hover, .bk-root .bk-bs-nav>li>span:focus {
+    background-color: #d1d4d7;
+}
+
+/* Custom styles for Bootstrap */
+.progress {
+    height: 40px;
+}
+.progress-bar {
+    background-color: #5f9ea0 !important;
+}
