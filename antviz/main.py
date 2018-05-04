@@ -101,7 +101,7 @@ def make_plot_map(mapper, tooltips_map, species_val, species_title):
     tooltips = tooltips_map
     hov = HoverTool(tooltips=tooltips, mode='mouse')
     p_map = figure(plot_width=fig_width, plot_height=fig_height, title= species_title + " Density By Country",
-                   tools=[hov, PanTool(), BoxZoomTool(), WheelZoomTool(), SaveTool(), ResetTool()],
+                   tools=[hov, SaveTool(), ResetTool()],
                    x_range=(-180, 180),
                    y_range=(-90, 90))
     p_map.patches(xs='latitudes',
