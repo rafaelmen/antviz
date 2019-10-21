@@ -2,7 +2,7 @@ Flask==0.12.2
 Jinja2==2.10
 MarkupSafe==1.0
 PyYAML==3.12
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 bokeh==0.12.14
 certifi==2017.11.5
 chardet==3.0.4
